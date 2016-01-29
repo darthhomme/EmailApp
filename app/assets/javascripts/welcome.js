@@ -3,7 +3,7 @@ var app = angular.module('EmailApp', []);
 app.controller('EmailsController', ['$scope', '$http', function($scope, $http){
 
 
-  $scope.getAllSignings = function(e) {
+  $scope.getAllSignings = function() {
     $http.get('/api/signings/').then(function(response){
       var data = response.data;
       $scope.signings = data.signings;
